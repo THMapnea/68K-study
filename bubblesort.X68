@@ -13,7 +13,6 @@ array_offset EQU 8                                                              
 
 
 
-
     ORG   $2000
     
 SWITCH:
@@ -46,13 +45,6 @@ BUBBLESORT:
         UNLK A6                                                                     *destroy frame pointer
         DBRA D5,BUBBLESORT                                                          *repeat
     RTS                                                                             *return    
-    
-
-
-
-
-
-
 
 
 
