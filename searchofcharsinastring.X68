@@ -63,6 +63,7 @@ START:                  ; first instruction of program
     PEA chars                                                                         *push the effective address of the chars in the stack
     PEA result                                                                        *push the effective address of the result in the stack
     JSR SEARCH                                                                        *calls the subroutine
+    ADDA.l #12,SP                                                                     *restore the stack pointer
     SIMHALT             ; halt simulator
 
 * Put variables and constants here
