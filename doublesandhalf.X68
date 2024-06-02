@@ -12,7 +12,7 @@ updated_array DS.l 9                                                            
 array_offset EQU 16                                                                                     *array offset
 dim_offset EQU 12                                                                                       *dimension offset
 updated_array_offset EQU 8                                                                              *updated array offset
-sub_reg REG A0-A2/D0-D2                                                                                 *register used by the subroutine
+sub_reg REG A0-A1/D0,D2                                                                                 *register used by the subroutine
 
 
     ORG   $2000
