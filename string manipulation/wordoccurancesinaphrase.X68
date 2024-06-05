@@ -12,7 +12,7 @@ occurances DS.b 1                                                     *space of 
 sub_reg REG A0-A2/D0-D3                                               *declaration of the register used in the subroutine with then context saving
 phrase_offset EQU 16                                                  *phrase offset
 word_offset EQU 12                                                    *word offset
-occurances_offset EQU 8                                               *ocurances offset
+occurances_offset EQU 8                                               *occurances offset
 
 
 
