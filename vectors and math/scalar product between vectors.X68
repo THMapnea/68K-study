@@ -8,7 +8,7 @@
     
 vect1 DC.w 1,2,3,4,5,6                      *declare vector 1
 vect2 DC.w 3,4,5,6,7,8                      *declare vector 2
-dim DC.b 5                                  *dimension of vectors
+dim DC.b 6                                  *dimension of vectors
 ris DS.l 1                                  *result we are considering not using I/O operation to get values
 vect1_offset EQU 20                         *we create a constant with the offset in the stack of our vector 1 that given the lifo structure needs to be the higher
 vect2_offset EQU 16                         *we create a constant with the offset in the stack of our vector 2
@@ -28,7 +28,8 @@ COMPUTEPRODUCT:
     MOVEA.l vect2_offset(A6),A1             *load from the stack in to an address register
     MOVEA.l dim_offset(A6),A2               *load from the stack in to an address register
     MOVEA.l ris_offset(A6),A3               *load from the stack in to an address register the addres of the storage memory that we declared previously
-    MOVE.b (A2)+,D2                         *we load the dimension in a data register
+    MOVE.b (A2),D2                          *we load the dimension in a data register
+    SUBQ #1,D2                              *subtract one for DBRA usage                           
     CLR D3                                  *we clear D3 to be sure to have no value before starting operating
     
     LOOP:
