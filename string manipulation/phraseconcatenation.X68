@@ -9,7 +9,7 @@
 
 phrase1 DC.b 'screw you guys',0                         *declare the first phrase
 phrase2 DC.b 'I am going home',0                        *declare the second phrase
-result DS.b 1000                                        *save memory for the concatenation with worst case scenario
+result DS.b 100                                         *save memory for the concatenation with worst case scenario
 sub_reg REG A0-A2/D0-D2                                 *save the register called by subroutines
 phrase1_offset EQU 16                                   *phrase 1 offset
 phrase2_offset EQU 12                                   *phrase 2 offset
